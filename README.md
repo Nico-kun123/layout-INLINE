@@ -15,24 +15,12 @@
   - [❗ Цели и задача](#-цели-и-задача)
   - [Основная работа](#основная-работа)
     - [Раздел "Описание"](#раздел-описание)
+      - [Slider с товарами](#slider-с-товарами)
     - [Раздел "Отзывы"](#раздел-отзывы)
-    - [Раздел "Откуда?"](#раздел-откуда)
+    - [Раздел "Откуда"](#раздел-откуда)
   - [💻 Стек технологий](#-стек-технологий)
   - [⏬ Установка](#-установка)
   - [Автор](#автор)
-
-ПРИМЕРЫ СООБЩЕНИЙ:
-
-> [!NOTE]
-> текст.
-> [!TIP]
-> текст.
-> [!WARNING]
-> текст.
-> [!CAUTION]
-> текст.
-> [!IMPORTANT]
-> текст.
 
 ---
 
@@ -59,21 +47,31 @@
 
 - "Описание"
 - "Отзывы"
-- "Откуда?"
+- "Откуда"
 
-Вёрстка сайта адаптивна для Desktop и мобильных устройств.
+Вёрстка сайта адаптивна для Desktop и мобильных устройств. Адаптивность — "Mobile First".
 
 ### Раздел "Описание"
 
-ы
+![image](https://github.com/user-attachments/assets/59176663-2e79-429e-a862-b4df77278770)
+
+#### Slider с товарами
+
+Slider (мобильные устройства):
+
+![image](https://github.com/user-attachments/assets/948370ef-448b-4298-a0bf-0b184a9647fe)
+
+Slider (Desktop):
+
+![image](https://github.com/user-attachments/assets/833ec215-c942-4ef9-a2a9-d25bcfefaad6)
 
 ### Раздел "Отзывы"
 
-ы
+![image](https://github.com/user-attachments/assets/f62e74f7-b647-49e5-ab56-5421846186d4)
 
-### Раздел "Откуда?"
+### Раздел "Откуда"
 
-ы
+![image](https://github.com/user-attachments/assets/af3ea3f2-2fb2-4a0f-baaf-2cb268c3471e)
 
 ---
 
@@ -94,61 +92,49 @@
 
 ## ⏬ Установка
 
-Клонируем удалённый репозиторий на локальную машину:
+Клонируем удалённый репозиторий на локальную машину и устанавливаем все необходимые компоненты:
 
 ```markdown
-git clone https://github.com/Nico-kun123/
-```
-
-Устанавливаем все необходимые компоненты:
-
-```markdown
-npm install
+git clone https://github.com/Nico-kun123/layout-INLINE
+cd layout-INLINE
+npm i
 ```
 
 Содержание <code>package.json</code>:
 
 ```json
 {
-  "name": "my-portfolio",
+  "name": "layout-inline",
+  "author": {
+    "name": "Nicolay Kudryavtsev"
+  },
   "version": "0.0.0",
-  "description": "Мой гайд по более быстрому старту и ускорению разработки проектов 😎",
   "private": true,
-  "homepage": "https://nico-kun123.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "npm run build && vite preview",
-
-    "test:unit": "vitest",
-    "test": "jest --config=jest.config.js --watchAll --cache",
-    "coverage": "jest --config=jest.config.js --coverage --watchAll --cache",
-    "clearCache": "jest --clearCache",
-
-    "type-check": "vue-tsc --build --force",
-
-    "lint": "eslint src --ext .ts",
+    "preview": "vite preview",
+    "build:preview": "npm run build && npm run preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "lint:fix": "npm run lint -- --fix",
-
-    "format": "prettier --write src/",
-
+    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,md}\"",
     "deploy": "npm run build && gh-pages -d dist"
   },
-  "keywords": [],
-  "author": {
-    "name": "Nicolay Kudryavtsev"
+  "dependencies": {
+    "gh-pages": "^6.1.1",
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3"
   },
-  "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
-    "@types/jest": "^29.5.11",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.77.8",
+    "vite": "^5.4.2",
+    "vite-plugin-purgecss-updated-v5": "^1.2.1"
   }
 }
 ```
