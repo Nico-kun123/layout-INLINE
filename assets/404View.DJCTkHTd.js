@@ -1,1 +1,0 @@
-import{_ as t,r as o,c as a,e as n,w as s,F as c,a as r,o as _,d}from"./index.8ewdqEgZ.js";const l={},i=r("div",null,"404",-1);function u(f,m){const e=o("RouterLink");return _(),a(c,null,[i,n(e,{to:"/"},{default:s(()=>[d("На главную")]),_:1})],64)}const x=t(l,[["render",u]]);export{x as default};
