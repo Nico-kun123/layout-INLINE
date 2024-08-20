@@ -1,0 +1,228 @@
+/* Import variables */
+@import './_variables.scss';
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ✅ GLOBAL STYLES ✅ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: $font-family-primary;
+  line-height: $line-height-normal;
+  color: map-get($map: $UI-color, $key: 'text-main');
+}
+
+:root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  min-width: toRem(320);
+  max-width: 1100px;
+  margin: 0 auto;
+  background: map-get($map: $UI-color, $key: 'bg-color');
+  color: map-get($map: $UI-color, $key: 'text-main');
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  max-width: toRem(1066px);
+  margin: 0 auto;
+}
+
+/* Разделители */
+.separator,
+.separator-alt {
+  width: 100%;
+  height: 0px;
+}
+/* Для Navbar */
+.separator {
+  border: 1px solid map-get($map: $UI-color, $key: 'separator');
+}
+/* Для всего остального */
+.separator-alt {
+  border: 1px solid map-get($map: $UI-color, $key: 'separator-alt');
+}
+
+/* Контент страницы */
+.page-content {
+  padding: 0 20px;
+}
+@include responsiveness(desktop) {
+  .page-content {
+    padding: 0;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ✅ COMMON STYLES ✅ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: $line-height-normal;
+
+  &:last-child {
+    margin-bottom: $margin-medium;
+  }
+}
+
+button {
+  background-color: map-get($map: $UI-color, $key: 'btn-bg');
+  border-radius: toRem(5);
+  border: transparent;
+  font-weight: $font-weight-bold;
+  padding: toRem(10) toRem(18);
+  text-align: center;
+}
+
+b,
+legend,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  margin: $margin-medium 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* 👀 TRANSITIONS 👀 */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+a,
+button {
+  -webkit-transition:
+    background-color $transition-duration-fast $transition-easing-4,
+    border-color $transition-duration-fast $transition-easing-4,
+    color $transition-duration-fast $transition-easing-4,
+    -webkit-box-shadow $transition-duration-fast $transition-easing-4,
+    -webkit-transform $transition-duration-fast ease;
+  transition:
+    background-color $transition-duration-fast $transition-easing-4,
+    border-color $transition-duration-fast $transition-easing-4,
+    color $transition-duration-fast $transition-easing-4,
+    -webkit-box-shadow $transition-duration-fast $transition-easing-4,
+    -webkit-transform $transition-duration-fast ease;
+  -o-transition:
+    background-color $transition-duration-fast $transition-easing-4,
+    border-color $transition-duration-fast $transition-easing-4,
+    color $transition-duration-fast $transition-easing-4,
+    box-shadow $transition-duration-fast $transition-easing-4,
+    transform $transition-duration-fast ease;
+  transition:
+    background-color $transition-duration-fast $transition-easing-4,
+    border-color $transition-duration-fast $transition-easing-4,
+    color $transition-duration-fast $transition-easing-4,
+    box-shadow $transition-duration-fast $transition-easing-4,
+    transform $transition-duration-fast ease;
+  transition:
+    background-color $transition-duration-fast $transition-easing-4,
+    border-color $transition-duration-fast $transition-easing-4,
+    color $transition-duration-fast $transition-easing-4,
+    box-shadow $transition-duration-fast $transition-easing-4,
+    transform $transition-duration-fast ease,
+    -webkit-box-shadow $transition-duration-fast $transition-easing-4,
+    -webkit-transform $transition-duration-fast ease;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* 👀 BROWSER STUFF 👀 */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: $scrollbar-width;
+  height: $scrollbar-width;
+}
+::-webkit-scrollbar-track {
+  background: map-get($map: $UI-color, $key: 'scrollbar-track');
+  border-radius: $scrollbar-border-radius;
+}
+::-webkit-scrollbar-thumb {
+  background: map-get($map: $UI-color, $key: 'scrollbar-thumb');
+  border-radius: $scrollbar-border-radius;
+}
+
+/* Убрать выделение при нажатии (для мобильных устройств) */
+/* Стили для курсора */
+a,
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Стили для disabled */
+[disabled] {
+  background: map-get($map: $UI-color, $key: 'btn-bg-disabled');
+  color: map-get($map: $UI-color, $key: 'btn-text-disabled');
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ✨ RESPONSIVENESS ✨ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* 320px */
+@include responsiveness(phone-portrait, 'portrait') {
+}
+
+/* 480px */
+@include responsiveness(phone-landscape, 'landscape') {
+}
+
+/* 600px */
+@include responsiveness(tablet-portrait, 'portrait') {
+}
+
+/* 900px */
+@include responsiveness(tablet-landscape, 'landscape') {
+}
+
+/* 1200px */
+@include responsiveness(desktop) {
+}
+
+/* 1800px */
+@include responsiveness(big-desktop) {
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* 👀 OTHER MEDIA QUERIES 👀 */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Hover effects */
+@media (hover: hover) {
+  a:hover {
+    -webkit-transition: $transition-duration-slow $transition-easing-3; 
+    -o-transition: $transition-duration-slow $transition-easing-3;
+    transition: $transition-duration-slow $transition-easing-3;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    &:hover {
+      background: map-get($map: $UI-color, $key: 'scrollbar-thumb-hover');
+    }
+  }
+}

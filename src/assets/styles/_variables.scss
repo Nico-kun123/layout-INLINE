@@ -1,0 +1,93 @@
+/* Шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Цветовая палитра */
+$UI-color: (
+  bg-color: #ffffff,
+  btn-bg-main: #ffffff,
+  btn-bg-main-hover: #eeeeee,
+  btn-bg-secondary: #429f3a,
+  btn-bg-secondary-hover: #347d2e,
+  btn-outline: #dedede,
+  // btn-outline-hover: black,
+  btn-text-main: #ffffff,
+  btn-text-secondary: #043e44,
+  btn-text-ternary: #429f3a,
+  // btn-text-hover: black,
+  // btn-text-disabled: black,
+  // btn-submit-bg: #604cc3,
+  // btn-submit-bg-hover: #756de7,
+  // btn-submit-bg-disabled: #c7c7c7,
+  // btn-submit-outline: white,
+  // btn-submit-text: black,
+  // btn-submit-text-hover: white,
+  // links: #13a0ff,
+  // label: #454343,
+  // links-hover: #80c4e9,
+  // navbar: #604cc3,
+  navbar-link: #444444,
+  navbar-link-hover: #429f3a,
+  navbar-link-active: #429f3a,
+  // rating-bg: #b2b2b2,
+  // rating-bg-star: #f9ce1e,
+  scrollbar-track: white,
+  scrollbar-thumb: #429f3a,
+  scrollbar-thumb-hover: #347d2e,
+  separator: #b2b2b2,
+  separator-alt: #b2b2b280,
+  text-main: #444444,
+  text-secondary: #429f3a
+);
+
+/* Шрифты */
+$font-family-primary: 'Montserrat', sans-serif;
+// $font-family-secondary: 'Averia Libre', system-ui;
+// $font-family-tertiary: 'Open Sans', sans-serif;
+
+/* Размеры шрифтов */
+$font-size-small: 12px;
+$font-size-normal: 14px;
+$font-size-large: 16px;
+$font-size-xlarge: 18px;
+$font-size-xxlarge: 20px;
+
+/* Жирность шрифтов */
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+
+/* Ширина линий */
+// $line-height-small: 1.4;
+$line-height-normal: 20px;
+// $line-height-large: 1.6;
+
+/* Scrollbar width and border radius */
+$scrollbar-width: 8px;
+$scrollbar-border-radius: 4px;
+
+/* Отступы (margins) */
+$margin-small: toRem(8);
+$margin-medium: toRem(16);
+$margin-large: toRem(24);
+
+/* Границы (Borders) */
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 12px;
+$border-width: 1px;
+$border-style: solid;
+
+/* Тени (Shadows) */
+$box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
+$box-shadow-dark: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+/* Переходы (Transitions) */
+$transition-duration-fast: 0.2s;
+$transition-duration-normal: 0.3s;
+$transition-duration-slow: 0.5s;
+$transition-easing-1: ease-in;
+$transition-easing-2: ease-out;
+$transition-easing-3: ease-in-out;
+$transition-easing-4: linear;
