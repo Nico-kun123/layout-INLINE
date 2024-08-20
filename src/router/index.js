@@ -24,15 +24,7 @@ const router = createRouter({
       name: 'origins',
       component: () => import('../views/OriginsView.vue')
     },
-    // 404
-    {
-      path: '/:pathMatch(.*)*',
-      name: '404',
-      component: () => import('../views/404View.vue'),
-      meta: {
-        hideNavbar: true
-      }
-    }
+    
   ]
 })
 
