@@ -10,6 +10,11 @@ const router = createRouter({
       redirect: '/description'
     },
     {
+      path: '/layout-INLINE/',
+      name: 'gh-pages-part',
+      redirect: '/description'
+    },
+    {
       path: '/description',
       name: 'description',
       component: DescriptionView

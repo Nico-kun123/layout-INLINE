@@ -1,9 +1,9 @@
 {
   "name": "layout-inline",
   "author": {
-    "name": "Nicolay Kudryavtsev"
+    "name": "Nicolay Kudryavtsev",
+    "email": "nicolay.kudryavtsev@gmail.com"
   },
-  "homepage": "https://nico-kun123.github.io/layout-INLINE/",
   "version": "0.0.0",
   "private": true,
   "type": "module",
